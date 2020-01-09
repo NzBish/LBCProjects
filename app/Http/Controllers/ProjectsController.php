@@ -43,7 +43,15 @@ class ProjectsController extends Controller
             'year' => 'required'
         ]);
 
-       return 123;
+      //Create Project
+      $project = new Project;
+      $project->title = $request->input('title');
+      $project->description = $request->input('description');
+      $project->body = $request->input('body');
+      $project->year = $request->input('year');
+      $project->save();
+
+      return redirect('/projects')->with('success', 'Project Added');
     }
 
     /**

@@ -5,7 +5,8 @@
     @if(count($projects)>0)
     @foreach($projects as $project)
     <div class="container">
-    <div class="card middle" >
+        
+    <div class="card" >
     	<div class="front" id="one">  
         <h1>{{$project->title}}</h1>
         <img src="/img/boardgame.jpg">		
@@ -20,9 +21,11 @@
                 </div>
             </div>
         </div>
-    </div>    
     </div>
-    @endforeach  
+        
+   
+    @endforeach 
+</div> 
     @else  
         <p>No projects found</p>
     @endif
