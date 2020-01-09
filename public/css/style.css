@@ -1,0 +1,193 @@
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+
+body{		
+	font-family: 'Passion One', cursive;
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+	background:rgba(0,128,128,0.2);
+}
+/*Navbar*/
+.nav{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	min-height: 8vh;
+	background-image: url("/img/lbclogo.jpg");	
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-color: white;
+}
+
+
+.nav-links{
+	display: flex;	
+	justify-content: space-around;
+	width: 40%;
+	font-size: 2em;
+}
+.nav-links a{
+	text-decoration: none;
+	letter-spacing: 3px;
+	
+}
+.nav-links li{
+	list-style: none;
+}
+
+@media screen and (max-width: 1024px){
+	.nav-links{
+		width:60%;
+	}
+}
+
+@media screen and (max-width: 768px){
+	.nav-links{
+		font-size: 1.5em;
+	}
+}
+/*Cards*/
+.container{	
+	margin: 100px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	
+}
+
+#one{
+	background: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);
+}
+#two{
+	background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+}
+#three{
+	background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+}
+#four{
+	background: linear-gradient(90deg, #FDBB2D 0%, #22C1C3 100%);
+}
+#five{
+	background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+}
+#six{
+	background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+}
+#seven{
+	background: linear-gradient(90deg, #fcff9e 0%, #c67700 100%);
+}
+
+.middle{	
+	transform: translate(0%,0%);
+}
+.card {	
+	width: 300px;
+	height: 400px;		
+	margin: 20px 0;
+
+}
+.front, .back{
+	width: 100%;
+	height: 100%;
+	overflow:hidden;
+	backface-visibility: hidden;
+	position: absolute;
+	transition: transform .6s linear;
+	border-radius: 25px;
+}
+.front h1{
+	font-size: 4em;
+	color: white;
+	text-align: center;
+}
+.front img{
+	padding-left: 10px;
+}
+.front{	
+	transform: perspective(600px) rotateY(0deg);
+}
+.back{		
+	padding: 1em;
+	background: rgba(32,178,170,0.5);
+	transform: perspective(600px) rotateY(180deg);
+}
+.back h2{
+	font-size: 2em;
+	padding-bottom: .5em;
+	text-align: center;
+}
+p{
+	display: block;
+	padding-bottom: 2em;
+}
+.back-content{	
+	color: #2c3e50;
+	text-align: justify;
+	width: 100%;
+
+}
+.card-link{	
+	display:block;
+	margin: auto;
+	width: 80%;
+	height: 3rem;		
+	padding-top: .5rem;
+	text-align: center;	
+	border:black solid 0.2rem;
+	font-size: 1.5rem;	
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #2c3e50;
+	
+}
+
+.card-link:hover{
+	background: #2c3e50;
+	color: white;
+}
+
+.card:hover > .front{
+	transform: perspective(600px) rotateY(-180deg);
+}
+
+.card:hover > .back{
+	transform: perspective(600px) rotateY(0deg);
+}
+/*Badge*/
+
+
+
+.badge {
+    background: #FF0000;    
+    height: 2em;    
+    text-align: center;
+    width: 3em;
+    float: right;
+    padding-top: 0.5em;
+    margin-top: 1em; 
+    border-radius: 2em/1em;   
+}
+span{
+	color: white;
+}
+
+
+
+/*cards end*/
+.description{
+	text-align: justify;
+	font-size: 3em;
+	width: 50%;
+	margin: 0 auto;
+}
+.description h1{
+	text-align: center;
+	padding: 1em;
+}
+
+
