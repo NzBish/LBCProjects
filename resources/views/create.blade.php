@@ -7,13 +7,18 @@
     
     {{Form::label('title', 'Title')}}
     {{Form::text('title', '')}}
+
+    {{Form::label('type', 'Type')}}
+    {{Form::text('type', '')}}
     
+    {{Form::label('faculty', 'Faculty')}}
+    {{Form::text('faculty', '')}}
 
     {{Form::label('description', 'Description')}}
-    {{Form::textarea('description', '')}}
+    {{Form::textarea('description', '',['id'=>'editor1'])}}
 
     {{Form::label('body', 'Body')}}
-    {{Form::textarea('body', '')}}
+    {{Form::textarea('body', '',['id'=>'editor2'])}}
 
     {{Form::label('year', 'Year')}}
     {{Form::number('year', '')}}

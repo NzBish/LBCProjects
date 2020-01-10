@@ -18,3 +18,6 @@ Route::get('/', function () {
 // Route::get('/projects/{project}', 'ProjectsController@show');
 
 Route::resource('projects','ProjectsController');
+Auth::routes();
+
+Route::get('/dashboard', 'DashboardController@index');

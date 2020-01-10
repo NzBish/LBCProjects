@@ -38,6 +38,8 @@ class ProjectsController extends Controller
     {
         $this->validate($request, [
             'title' => 'required',
+            'type' => 'required',
+            'faculty' => 'required',
             'description' => 'required',
             'body' => 'required',
             'year' => 'required'
@@ -46,9 +48,12 @@ class ProjectsController extends Controller
       //Create Project
       $project = new Project;
       $project->title = $request->input('title');
+      $project->type = $request->input('type');
+      $project->faculty = $request->input('faculty');
       $project->description = $request->input('description');
       $project->body = $request->input('body');
       $project->year = $request->input('year');
+      $project->user_id = auth()->user()->id;
       $project->save();
 
       return redirect('/projects')->with('success', 'Project Added');
@@ -74,7 +79,8 @@ class ProjectsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $project = Project::find($id);
+        return view('edit')->with('project', $project);
     }
 
     /**
@@ -86,7 +92,26 @@ class ProjectsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required',
+            'type' => 'required',
+            'faculty' => 'required',
+            'description' => 'required',
+            'body' => 'required',
+            'year' => 'required'
+        ]);
+
+      //Create Project
+      $project = Project::find($id);
+      $project->title = $request->input('title');
+      $project->type = $request->input('type');
+      $project->faculty = $request->input('faculty');
+      $project->description = $request->input('description');
+      $project->body = $request->input('body');
+      $project->year = $request->input('year');
+      $project->save();
+
+      return redirect('/projects')->with('success', 'Project Updated');
     }
 
     /**
@@ -97,6 +122,8 @@ class ProjectsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $project = Project::find($id);
+        $project->delete();
+        return redirect('/projects')->with('success', 'Project Deleted');
     }
 }

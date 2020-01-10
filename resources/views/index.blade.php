@@ -7,17 +7,17 @@
     <div class="container">
         
     <div class="card" >
-    	<div class="front" id="one">  
+    	<div class="front" id="{{$project->faculty}}">  
         <h1>{{$project->title}}</h1>
         <img src="/img/boardgame.jpg">		
     	</div>
     	<div class="back">
     		<div class="back-content middle">
     			<h2>{{$project->title}}</h2>
-    			<p>{{$project->description}}</p>    			
+    			<p>{!!$project->description!!}</p>    			
     			<a class="card-link" href="/projects/{{$project->id}}">Read More</a>    				
                 <div class="badge">
-                    <span>Minor</span>
+                    <span>{{$project->type}}</span>
                 </div>
             </div>
         </div>

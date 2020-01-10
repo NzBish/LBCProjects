@@ -52,33 +52,30 @@ body{
 	}
 }
 /*Cards*/
-.container{	
-	
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	
+.container{		
+	display: flex;		
+	flex-wrap: wrap-reverse;
 }
 
-#one{
+#business{
 	background: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);
 }
-#two{
+#english{
 	background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
 }
-#three{
+#science{
 	background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
 }
-#four{
+#technology{
 	background: linear-gradient(90deg, #FDBB2D 0%, #22C1C3 100%);
 }
-#five{
+#health-pe{
 	background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
 }
-#six{
+#social-sciences{
 	background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
 }
-#seven{
+#maths{
 	background: linear-gradient(90deg, #fcff9e 0%, #c67700 100%);
 }
 
@@ -90,7 +87,7 @@ body{
 	transform: translate(0%,0%);
     width: 300px;
 	height: 400px;		
-	margin: 20px;
+	
 	
 
 }
