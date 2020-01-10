@@ -8,6 +8,16 @@ use App\Project;
 class ProjectsController extends Controller
 {
     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' =>['index', 'show']]);
+    }
+
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -80,6 +90,7 @@ class ProjectsController extends Controller
     public function edit($id)
     {
         $project = Project::find($id);
+       
         return view('edit')->with('project', $project);
     }
 
