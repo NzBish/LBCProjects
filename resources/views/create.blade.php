@@ -9,10 +9,10 @@
     {{Form::text('title', '')}}
 
     {{Form::label('type', 'Type')}}
-    {{Form::text('type', '')}}
+    {{Form::select('type', ['Major'=>'Major','Minor'=>'Minor'],null,['placeholder' => 'Pick a type...'])}}
     
     {{Form::label('faculty', 'Faculty')}}
-    {{Form::text('faculty', '')}}
+    {{Form::select('faculty', ['Business'=>'Business', 'English'=>'English', 'Science'=>'Science','Technology'=>'Technology', 'Health-PE'=>'Health-PE','SocialSciences'=>'SocialSciences', 'Maths'=>'Maths','VisualArts'=>'VisualArts','PerformingArts'=>'PerformingArts', 'Languages'=>'Languages', 'DigitalWorkingGroup'=>'DigitalWorkingGroup', 'PESports'=>'PESports'],null,['placeholder' => 'Pick a faculty...'])}}
 
     {{Form::label('description', 'Description')}}
     {{Form::textarea('description', '',['id'=>'editor1'])}}
@@ -21,7 +21,7 @@
     {{Form::textarea('body', '',['id'=>'editor2'])}}
 
     {{Form::label('year', 'Year')}}
-    {{Form::number('year', '')}}
+    {{Form::select('year', ['9'=>'9','10'=>'10'],null,['placeholder' => 'Pick a year...'])}}
 
     {{Form::submit('Submit')}}    
 
