@@ -14,7 +14,7 @@ class ProjectsController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth', ['except' =>['index', 'show']]);
+        $this->middleware('auth', ['except' =>['index','list', 'show']]);
     }
 
     /**
@@ -25,7 +25,19 @@ class ProjectsController extends Controller
     public function index()
     {
         $projects = Project::all();
-        return view('index')->with('projects',$projects);
+        $year = '9 and 10';        
+        return view('index')->with('projects',$projects)->with('year',$year);
+    }
+    /**
+     * Display a listing of the resource based on year.
+     *
+     * @return \Illuminate\Http\Response
+     */
+
+    public function list($year)
+    {
+        $projects = Project::where('year',$year)->orderBy('title', 'asc')->get();
+        return view('index')->with('projects',$projects)->with('year',$year);
     }
 
     /**
