@@ -15,6 +15,7 @@ body{
 
 .title{
 	text-align: center;
+	padding-bottom: 1em;
 }
 label a{
 	pointer-events: none;
@@ -309,9 +310,9 @@ span{
 
 
 /*cards end*/
-.description{
+.description{	
 	text-align: justify;
-	font-size: 3em;
+	font-size: 2em;
 	width: 50%;
 	margin: 0 auto;
 }
@@ -319,6 +320,12 @@ span{
 	text-align: center;
 	padding: 1em;
 }
+.headings{
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 1em;
+}
+
 /*form*/
 input[type=text], select, textarea {
 	width: 100%;
@@ -367,3 +374,16 @@ input[type=text], select, textarea {
 	color: #D8000C;
 	background-color: #FFBABA;
   }
+#edit_button{
+	background-color: green;
+	color: white;	
+	padding: 0.3em 1em;
+	text-decoration: none;
+	border-radius: 8px;
+	float: left;
+
+}
+.edit_delete{
+	display: flex;
+	justify-content: space-around;
+}

@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 
 Route::resource('projects','ProjectsController');
-Auth::routes();
+Auth::routes(['register'=>false]);
 
 Route::get('/dashboard', 'DashboardController@index');
 Route::get('/projects/index/{year}', 'ProjectsController@list');

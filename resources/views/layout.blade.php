@@ -21,18 +21,19 @@
       <span class='hamburger'></span>
     </span>
       <ul>
-        <li><a href="/" id="links" class="navlinks">About</a></li>
-        <li><a href="/projects/create" class="navlinks">Create</a></li>
-        <li><a href="/projects" class="navlinks">Projects</a></li>
+        <li><a href="/" id="links" class="navlinks">Home</a></li>
+        
+        <li><a href="/projects" class="navlinks">All Projects</a></li>
         
         <!-- Authentication Links -->
         @guest
-        <li><a href="{{ route('login') }}" class="navlinks">{{ __('Login') }}</a></li>
+        <li><a href="{{ route('login') }}" class="navlinks">{{ __('Teachers') }}</a></li>
         @if (Route::has('register'))
             <li><a href="{{ route('register') }} "class="navlinks">{{ __('Register') }}</a></li>
         @endif
     @else
         <li><a href="\dashboard" class="navlinks">{{ Auth::user()->name }}</a></li>
+        <li><a href="/projects/create" class="navlinks">Create</a></li>
          <li><a href="{{ route('logout') }}" class="navlinks" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                     {{ __('Logout') }} </a>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;" >
