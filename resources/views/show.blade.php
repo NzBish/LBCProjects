@@ -1,8 +1,7 @@
 @extends ('layout')
 
 @section ('content')
-<div class="description">
-  
+<div class="whiteboard">  
     <h1>{{$project->title}}</h1>
     <div class= "headings">
     <h3>{{$project->faculty}} Faculty</h3>

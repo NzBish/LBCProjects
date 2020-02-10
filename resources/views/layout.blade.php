@@ -7,7 +7,8 @@
   <title>LBC Projects</title> 
   <script src="{{ asset('js/app.js') }}" defer></script>
   
-	<link href="https://fonts.googleapis.com/css?family=Catamaran&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Catamaran&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href='{{asset('css/style.css')}}'>  
 </head>
 <body>
@@ -20,7 +21,7 @@
     <span class='menu'>
       <span class='hamburger'></span>
     </span>
-      <ul>
+      <ul class="navlinks">
         <li><a href="/" id="links" class="navlinks">Home</a></li>
         
         <li><a href="/projects" class="navlinks">All Projects</a></li>
